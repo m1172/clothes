@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.block-1 {
+	background-image: url("./assets/slider-image-1.jpeg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 90vh;
+	position: relative;
+}
+.block-2 {
+	background-image: url("./assets/slider-img-2.jpeg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 90vh;
+}
+
+
+.slick-list {
+	overflow: hidden;
+	display: flex;
+}
+
+.slick-track {
+	display: flex;
+}
+
+.slick-next {
+	position: absolute !important;
+	right: 80px !important;
+	font-size: 0 !important;
+	width: 40px !important;
+	top: 22rem;
+	height: 40px !important;
+	border: none;
+	cursor: pointer;
+
+	background-image: url("./assets/arrow-right.png");
+	background-repeat: no-repeat;
+	background-size: 2rem;
+	background-position: center;
+}
+
+.slick-prev {
+	position: absolute !important;
+	font-size: 0 !important;
+	width: 40px !important;
+	height: 40px !important;
+	left: 80px !important;
+	top: 22rem;
+	border: none;
+	cursor: pointer;
+	z-index: 999;
+
+	background-image: url("./assets/left-arrow-5.png");
+	background-repeat: no-repeat;
+	background-size: 2rem;
+	background-position: center;
+}
+
+
+.active {
+	color: #4f46e5;
+}
+
+
+.gTitle {
+	position: relative;
+
+}
+
+.gTitle::before {
+	content: "";
+	position: absolute;
+	width: 4rem;
+	height: 0.2rem;
+	top: 60px;
+	left: 47.3%;
+	background-color: black;
+}
+
+.iconsBlock {
+	overflow: hidden;
+}
+
+.icons {
+	transform: translateX(130%);
+	transition: all .3s ease-in-out;
+}
+
+.icons:hover .icon {
+   color: white;
+}
+
+.productBlock:hover .icons {
+	transform: translateX(0);
+}
+
+/* notification */
+:root {
+  --container-height: 500px;
+  --contaier-width: 400px;
+  --header-height: 200px;
+}
+
+.notification {
+  position: absolute;
+  
+	top: 45rem;
+	left: 40%;
+	right: 0;
+  width: calc(3 * var(--contaier-width) / 4);
+  height: 60px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background-color: rgb(233, 81, 81);
+  color: #fff;
+	z-index: 9;
+
+  transition: all .3s ease;
+	transform: translateY(10rem);
+}
+
+
+
+@media (max-width: 576px){
+	.block-1,.block-2{
+		height: 50vh;
+	}
+	.gTitle::before{
+		left: 40%;
+	}
+}
